@@ -20,7 +20,7 @@ app.post('/create-order', (req, res) => {
     const { name, email } = req.body;
 
     const options = {
-        amount: 1,
+        amount: 100,
         currency: 'INR',
         receipt: 'receipt#1'
     };
