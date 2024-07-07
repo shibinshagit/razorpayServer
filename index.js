@@ -20,7 +20,7 @@ app.post('/create-order', (req, res) => {
     const { name, email } = req.body;
 
     const options = {
-        amount: 100000,
+        amount: 1,
         currency: 'INR',
         receipt: 'receipt#1'
     };
@@ -46,7 +46,7 @@ app.post('/payment-success', (req, res) => {
     doc.text(`Email: ${email}`);
     doc.text(`Payment ID: ${razorpay_payment_id}`);
     doc.text(`Order ID: ${razorpay_order_id}`);
-    doc.text(`Amount: ₹1000`);
+    doc.text(`Amount: ₹1`);
     doc.end();
 
     doc.pipe(res);
